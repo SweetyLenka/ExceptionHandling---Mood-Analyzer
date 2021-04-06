@@ -14,15 +14,15 @@ public class MoodAnalyzer {
 
     }
 
-    public String analyseMood() {
+    public String analyseMood(String message)throws MoodAnalysisException {
         try{
-        if(message.toLowerCase(Locale.ROOT).contains("happy")){
-            return "HAPPY";
-        }else{
+        if(message.toLowerCase(Locale.ROOT).contains("sad")){
             return "SAD";
+        }else{
+            return "HAPPY";
         }
         }catch (NullPointerException e){
-            return "HAPPY";
+            throw new MoodAnalysisException("You have entered,Please try again");
         }
 
     }
