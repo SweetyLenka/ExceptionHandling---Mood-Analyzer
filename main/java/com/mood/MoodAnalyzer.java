@@ -15,11 +15,16 @@ public class MoodAnalyzer {
     }
 
     public String analyseMood() {
+        try{
         if(message.toLowerCase(Locale.ROOT).contains("happy")){
             return "HAPPY";
         }else{
             return "SAD";
         }
+        }catch (NullPointerException e){
+            return null;
+        }
+
     }
 }
 

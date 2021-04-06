@@ -9,8 +9,8 @@ public class MoodAnalyzerTest {
      public void testMoodAnalysis() throws Exception {
 
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-        moodAnalyzer.message="I am in happy mood";
+        moodAnalyzer.message=null;
         String mood = moodAnalyzer.analyseMood();
-        Assertions.assertEquals("HAPPY",mood);
+        Assertions.assertEquals(null,mood);
     }
 }
